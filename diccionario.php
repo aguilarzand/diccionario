@@ -27,7 +27,7 @@
           <h3><a href="entries-d.html">D</a></h3>
         </div>
         <div class="letter" id="letter-e">
-          <h3>E</h3>
+          <h3><a href="entries-e.html">E</a></h3>
           <ul>
             <li><a href="e.php?term=Eavesdrop">Eavesdrop</a></li>
             <li><a href="e.php?term=Edible">Edible</a></li>
