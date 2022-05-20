@@ -40,3 +40,26 @@ $(document).ready(function() {
 		$('#dictionary').load('j.html');
 	});
 });
+
+
+$(document).ready(function() {
+	$('#letter-h a').click(function(event) {
+		event.preventDefault();
+		$.get('h.xml', function(data) {
+			var html = '';
+			$(data).find('definition').each(function() {
+				var $definition = $(this);
+				var word = $definition.find('word').text();
+				var part = $definition.find('part').text();
+				var description = $definition.find('description').text();
+				html += '<div class="entry">';
+				html += '<h3 class="term">' + word + '</h3>';
+				html += '<div class="part">' + part + '</div>';
+				html += '<div class="definition">'+ description + '</div>';
+				html += '</div>';
+			});
+			$('#dictionary').html(html);
+		});
+	});
+});
+
